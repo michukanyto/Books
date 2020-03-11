@@ -5,7 +5,7 @@ import androidx.room.RoomDatabase
 import com.example.books.dao.IBookDao
 import com.example.books.model.Book
 
-const val DATABASE_NAME = "book_store"
+const val DATABASE_NAME = "book_db"
 
 @Database (entities = [Book::class], version = 1)
 abstract class AppDataBase: RoomDatabase() {
