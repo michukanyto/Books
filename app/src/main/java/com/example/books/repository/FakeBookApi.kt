@@ -1,6 +1,7 @@
 package com.example.books.repository
 
 import com.example.books.model.Book
+import timber.log.Timber
 
 private val BOOKS = listOf<Book>(
     Book(0,"To Kill a Mockingbird",
@@ -36,8 +37,21 @@ private val BOOKS = listOf<Book>(
 private const val INDEX = 2
 
 class FakeBookApi {
-
+    companion object{
+        private var bookIndex = 0
+    }
     fun loadBooks() : List<Book> {
-        return BOOKS
+        val bookSize = BOOKS.size
+        var newBookIndex = (bookIndex + INDEX) % bookSize
+
+        if (newBookIndex == 0) {
+            newBookIndex = bookSize
+        }
+        Timber.i("Book range -----> $bookIndex / $newBookIndex")
+        var bookSlice = BOOKS.subList(bookIndex,newBookIndex)
+
+        bookIndex = newBookIndex % bookSize
+
+        return bookSlice
     }
 }
