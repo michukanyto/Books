@@ -54,4 +54,8 @@ class FakeBookApi {
 
         return bookSlice
     }
+
+//    fun loadBooks(): List<Book> {
+//         return BOOKS
+//    }
 }

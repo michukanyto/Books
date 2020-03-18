@@ -8,4 +8,8 @@ import com.example.books.model.Book
 class BookViewModel: ViewModel() {
 
     val books: LiveData<List<Book>> = App.dataBase.bookDao().getAllBooks()
+
+    fun refreshBooks() {
+        App.repository.syncBooks()
+    }
 }

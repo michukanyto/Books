@@ -29,17 +29,18 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_launcher_foreground" />
+                app:srcCompat="@drawable/ic_launcher_foreground"
+                android:contentDescription="TODO" />
 
             <TextView
                 android:id="@+id/bookTitleTextView"
-                android:layout_width="302dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="12dp"
-                android:text="Book title"
+                android:layout_width="306dp"
+                android:layout_height="29dp"
+                android:layout_marginStart="4dp"
+                android:text="@string/book_title"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="#000000"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/imageView"
                 app:layout_constraintTop_toTopOf="@+id/imageView" />
@@ -49,7 +50,7 @@
                 android:layout_width="287dp"
                 android:layout_height="25dp"
                 android:layout_marginStart="12dp"
-                android:text="Writer"
+                android:text="@string/writer"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="14sp"
                 android:textStyle="italic"

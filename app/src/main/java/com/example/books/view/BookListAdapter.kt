@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.books.R
 import com.example.books.model.Book
 import com.squareup.picasso.Picasso
+import timber.log.Timber
 
 class BookListAdapter(private val books: List<Book>,
                       private val listener: BookListAdapterListener
@@ -49,6 +50,7 @@ class BookListAdapter(private val books: List<Book>,
                 .load(book.pictureUrl)
                 .placeholder(R.drawable.ic_book_placeholder)
                 .into(imageView)
+            Timber.d("------>  ${book.pictureUrl}")
         }
     }
 
