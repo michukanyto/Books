@@ -2,10 +2,8 @@ package com.example.books
 
 import android.app.Application
 import androidx.room.Room
-import androidx.room.RoomDatabase
 import com.example.books.database.AppDataBase
 import com.example.books.database.DATABASE_NAME
-import com.example.books.repository.BookRepository
 import com.example.books.repository.SyncRepository
 import timber.log.Timber
 

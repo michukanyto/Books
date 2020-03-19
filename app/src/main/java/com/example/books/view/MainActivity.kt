@@ -1,5 +1,6 @@
 package com.example.books.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.LinearLayout
@@ -43,6 +44,8 @@ class MainActivity : AppCompatActivity(), BookListAdapter.BookListAdapterListene
     }
 
     override fun onBookSelected(book: Book) {
-        TODO("Not yet implemented")
+        val intent = Intent(this,BookDetailActivity::class.java)
+        intent.putExtra(BookDetailActivity.BOOK_ID,book.id)
+        startActivity(intent)
     }
 }

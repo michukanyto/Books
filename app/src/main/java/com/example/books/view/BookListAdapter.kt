@@ -1,5 +1,6 @@
 package com.example.books.view
 
+import android.net.sip.SipSession
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -55,6 +56,8 @@ class BookListAdapter(private val books: List<Book>,
     }
 
     override fun onClick(v: View?) {
-        TODO("Not yet implemented")
+        when (v?.id) {
+            R.id.cardView -> listener?.onBookSelected(v?.tag as Book)
+        }
     }
 }
