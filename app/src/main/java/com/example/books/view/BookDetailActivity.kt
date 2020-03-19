@@ -6,6 +6,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.books.R
 import com.example.books.model.Book
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.activity_detail_book.*
 import timber.log.Timber
 
 class BookDetailActivity : AppCompatActivity() {
@@ -29,6 +31,13 @@ class BookDetailActivity : AppCompatActivity() {
     }
 
     private fun printOutBook(book: Book) {
+        Picasso.get()
+            .load(book.pictureUrl)
+            .placeholder(R.drawable.ic_book_placeholder)
+            .into(detailBookCover)
+        detailBookTitle.text = book.title
+        detailBookWriter.text = book.author
+        detailBookSummary.text = book.summary
 
     }
 }

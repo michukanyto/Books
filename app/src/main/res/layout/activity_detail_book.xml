@@ -6,4 +6,53 @@
     android:layout_height="match_parent"
     tools:context=".view.BookDetailActivity">
 
+    <ImageView
+        android:id="@+id/detailBookCover"
+        android:layout_width="0dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="24dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/detailBookTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Les lèvre de la joconde"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailBookCover" />
+
+    <TextView
+        android:id="@+id/detailBookWriter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Pierre Lepère"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/detailBookTitle"
+        app:layout_constraintStart_toStartOf="@+id/detailBookTitle"
+        app:layout_constraintTop_toBottomOf="@+id/detailBookTitle" />
+
+    <TextView
+        android:id="@+id/detailBookSummary"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:text="lorem"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailBookWriter" />
 </androidx.constraintlayout.widget.ConstraintLayout>
