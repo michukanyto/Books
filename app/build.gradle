@@ -47,15 +47,15 @@ dependencies {
 
     def room_version = "2.2.4"
     implementation "androidx.room:room-runtime:$room_version"
-    kapt "androidx.room:room-compiler:$room_version" // For Kotlin use kapt instead of annotationProcessor
+    kapt "androidx.room:room-compiler:$room_version"
+    // For Kotlin use kapt instead of annotationProcessor
 
     def work_version = "2.3.2"
     implementation "androidx.work:work-runtime-ktx:$work_version"
 
+
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.jakewharton.timber:timber:4.7.1'
-
-
 
 
 }

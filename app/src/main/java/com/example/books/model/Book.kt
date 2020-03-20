@@ -13,5 +13,4 @@ data class Book (
     val summary: String,
     @ColumnInfo(name = "picture_url")
     val pictureUrl: String
-
 )
